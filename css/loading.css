@@ -1,0 +1,413 @@
+/* 基础的样式设置 */
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    line-height: 100%;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    font-family: 游ゴシック体, Yu Gothic, YuGothic, ヒラギノ角ゴ Pro W3, Hiragino Kaku Gothic Pro, メイリオ, Meiryo, ＭＳ Ｐゴシック, Osaka, sans-serif;
+}
+
+a img,
+img {
+    border: 0;
+}
+
+img {
+    line-height: 100%;
+    vertical-align: bottom;
+}
+
+abbr,
+acronym {
+    border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+th,
+var {
+    font-style: normal;
+    font-weight: normal;
+}
+
+caption,
+th {
+    text-align: left;
+}
+
+code,
+kbd,
+pre,
+samp,
+tt {
+    font-family: monospace;
+    line-height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: 100%;
+    line-height: 100%;
+    font-weight: normal;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+q:before,
+q:after {
+    content: '';
+}
+
+button,
+fieldset,
+form,
+input,
+label,
+legend,
+select,
+textarea {
+    font-family: inherit;
+    font-size: 100%;
+    font-style: inherit;
+    font-weight: inherit;
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+fieldset {
+    border: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    font-size: 100%;
+}
+
+object {
+    outline: none;
+}
+
+article,
+aside,
+dialog,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section,
+small {
+    display: block;
+}
+
+/* 正式样式设置 */
+#loading {
+    background: url(../images/loading-img/bg_page-black.png)0 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+}
+
+#loading .logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -60px 0 0 -193px;
+}
+
+/* 设置底部的gif图 */
+#loading:after {
+    background: url(../images/loading-img/line_rainbow.gif)repeat-x 0 0;
+    content: '';
+    display: block;
+    height: 20px;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#loading #loadingBarSet {
+    position: absolute;
+    bottom: 200px;
+    left: 50%;
+    margin-left: -90px;
+}
+
+#loading #loadingBarSet p {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#loading #loadingBarMask {
+    background-color: #000;
+    width: 180px;
+    height: 16px;
+    overflow: hidden;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+
+/* 设置小人大盒子的动画 */
+@keyframes chara_move {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50.1% {
+        transform: translate(-100%, 0);
+    }
+
+    50.12% {
+        transform: translate(-100%, 100%);
+    }
+
+    50.13% {
+        transform: translate(100%, 100%);
+    }
+
+    50.14% {
+        transform: translate(100%, 0);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+#loading #loadChara .chara_set {
+    animation: chara_move 30s linear infinite;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 150px;
+}
+
+/* 给最底下的进度条设置绝对定位 */
+#loading #loadChara {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    width: 100%;
+}
+
+/* 给第二个大盒子设置动画 */
+@keyframes chara_move2 {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    99.9% {
+        transform: translate(-200%, 0);
+    }
+
+    99.98% {
+        transform: translate(-200%, 100%);
+    }
+
+    99.99% {
+        transform: translate(0, 100%);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+#loading #loadChara .chara_set.set2 {
+    animation: chara_move2 30s linear infinite;
+    left: 100%;
+}
+
+/* 给每个小盒子设置底部的绝对定位和宽高 */
+.ld_chara {
+    animation: chara_jump 0.5s linear infinite;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 119px;
+}
+
+/* 给每个小盒子的第一个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(1) {
+    left: 0%;
+}
+
+/* 给每个小盒子的第二个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(2) {
+    left: 12.5%;
+}
+
+/* 给每个小盒子的第三个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(3) {
+    left: 25%;
+}
+
+/* 给每个小盒子的第四个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(4) {
+    left: 37.5%;
+}
+
+/* 给每个小盒子的第五个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(5) {
+    left: 50%;
+}
+
+/* 给每个小盒子的第八个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(6) {
+    left: 62.5%;
+}
+
+/* 给每个小盒子的第九个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(7) {
+    left: 75%;
+}
+
+/* 给每个小盒子的第十个盒子设置左侧的left */
+#loading #loadChara .chara_set .ld_chara:nth-child(8) {
+    left: 87.5%;
+}
+/* 给所有小盒子设置跳动的动画 */
+@keyframes chara_jump { 0% { transform: translateY(0); }
+  50% { transform: translateY(3px); }
+  100% { transform: translateY(0); } }
+
+.ld_chara {
+    animation: chara_jump 0.5s linear infinite;
+    position: absolute;
+    bottom: 0;
+    width: 120px;
+    height: 119px;}
+
+/* 给奇数个小盒子设置跳动的动画 */
+@keyframes chara_jump2 {
+    0% {
+        transform: translateY(3px);
+    }
+
+    50% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(3px);
+    }
+}
+
+.ld_chara:nth-child(odd) {
+    animation: chara_jump2 0.5s linear infinite;
+}
+
+/* 给小盒子里面每个span设置背景图 */
+/* 总的背景图设置 */
+.ld_chara a,
+.ld_chara span {
+    background-image: url(../images/loading-img/img_sfc-chara.png);
+    background-repeat: no-repeat;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.chara1 a,
+.chara1 span {
+    background-position: -120px 0;
+}
+
+.chara2 a,
+.chara2 span {
+    background-position: 0 0;
+}
+
+.chara3 a,
+.chara3 span {
+    background-position: -360px 0;
+}
+.chara4 a, .chara4 span {
+    background-position: -360px -241px;
+}
+
+.chara5 a, .chara5 span {
+    background-position: -360px -122px;
+}
+
+.chara8 a, .chara6 span {
+    background-position: -240px 0;
+}
+.chara9 a, .chara7 span {
+    background-position: -0px -122px;
+}
+.chara10 a, .chara8 span {
+    background-position: -120px -122px;
+}
+.chara11 a, .chara11 span {
+    background-position: -120px -242px;
+}
+.chara12 a, .chara12 span {
+    background-position: 0 -242px;
+}
+.chara13 a, .chara13 span {
+    background-position: -240px -242px;
+}
+.chara22 a, .chara14 span {
+    background-position: -240px -122px;
+}
+.chara23 a, .chara15 span {
+    background-position: -240px -360px;
+}
+.chara24 a, .chara16 span {
+    background-position: 0 -360px;
+}
+.chara25 a, .chara17 span {
+    background-position: -480px 0;
+}
+.chara29 a, .chara18 span {
+    background-position: -120px -362px;
+}
+/* 设置加载进度条的css样式 */
+#loading #loadingBarMask #loadingBar {
+    background: #fff;
+    height: calc(100% - 4px);
+    width: 0;
+    border: 2px solid #000;
+    border-radius: 20px;}
+/* 给loading页面设置mask效果 */
+#loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    }
+
+.realPage {
+        height:2000px;
+        background-color: skyblue;
+        font-size: 60px;
+        text-align: center;
+        padding-top:50px;
+    }
