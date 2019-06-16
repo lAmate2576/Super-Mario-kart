@@ -7,7 +7,7 @@ var loadingBarTimeid = setInterval(function () {
     loadingBar.style.width = 'calc(' + loadingBarIndex + '% - 4px)'
 }, 100)
 var loadingTimeId = setTimeout(function () {
+    loading.parentNode.removeChild(loading)
     window.onload = function () {
-        loading.parentNode.removeChild(loading)
     }
 }, 10000)

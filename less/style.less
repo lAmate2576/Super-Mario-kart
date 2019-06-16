@@ -1,0 +1,57 @@
+//设置全局滚动条的样式
+#globalNav {
+    transform: translateY(-50%);
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    z-index: 999;
+    opacity: 1;
+
+    li {
+        margin-bottom: 20px;
+        font-size: 20px;
+    }
+
+    a {
+        display: block;
+        position: relative;
+        background-color: #fff;
+
+        div {
+            position: absolute;
+            right: -50px;
+            font-size: 12px;
+            color: white;
+            display: none;
+
+            span {
+                transition: width 0.4s ease;
+                position: relative;
+                top: -8px;
+                padding: 0 10px;
+                background-color: #000;
+            }
+        }
+    }
+
+    a:before {
+        border: 1px solid #fff;
+        content: '';
+        display: block;
+        width: 7px;
+        height: 7px;
+    }
+
+    a:hover:before {
+        background-color: #000;
+    }
+
+    a.active:before {
+        background-color: #000;
+    }
+
+    a:hover div {
+        display: block;
+        width: 150px;
+    }
+}
