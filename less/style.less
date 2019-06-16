@@ -18,11 +18,14 @@
         background-color: #fff;
 
         div {
+            width:0;
+            transition: 1s ;
             position: absolute;
             right: -50px;
             font-size: 12px;
             color: white;
             display: none;
+            
 
             span {
                 transition: width 0.4s ease;
@@ -53,5 +56,259 @@
     a:hover div {
         display: block;
         width: 150px;
+        border-radius:10px;
     }
+}
+
+.supermario-box {
+    position: relative;
+    max-width: 1920px;
+    min-width: 1024px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  .supermario-box .nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 20;
+  }
+  .supermario-box .nav .navTop {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to top, #232323 0, #000000 49%, #232323 50%, #000000 100%);
+    border-bottom: 2px solid #404040;
+  }
+  .supermario-box .nav .navTop ul {
+    height: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .supermario-box .nav .navTop ul li {
+    transform: skew(-15deg);
+    border-left: 2px solid #696969;
+  }
+  .supermario-box .nav .navTop ul li a {
+    display: block;
+    padding: 0 15px 0;
+    text-align: center;
+    color: #fff;
+    line-height: 30px;
+  }
+  .supermario-box .nav .navTop ul li a i {
+    transform: skew(15deg);
+    margin-top: 2px;
+    margin-right: 5px;
+    float: left;
+    display: block;
+    width: 22px;
+    height: 26px;
+    background: url(../img/img_item-sprite.png) -59px -84px;
+    background-size: 167px 111px;
+  }
+  .supermario-box .nav .navTop ul li a:hover {
+    background: linear-gradient(to top, #FE186D 0, #F9609C 49%, #F966A0 50%, #FF0A64 100%);
+  }
+  .supermario-box .nav .navTop ul li:nth-child(6) {
+    border-right: 2px solid #696969;
+  }
+  .supermario-box .nav .navBottom {
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #ca179b, #4d22d6);
+  }
+  .supermario-box #container {
+    height: 100%;
+    position: relative;
+  }
+  .supermario-box #container #MainVisual {
+    min-height: 660px;
+    height: 140vh;
+    position: relative;
+    overflow: hidden;
+    z-index: 10;
+  }
+  .supermario-box #container #MainVisual #mvInner {
+    transition: top 1.4s cubic-bezier(0.86, 0, 0.07, 1);
+    background: url(../img/bg_mv.jpg) no-repeat 50% 50% fixed;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 660px;
+    height: 100%;
+    overflow: hidden;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj {
+    position: fixed;
+    display: none;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj img {
+    transform-origin: 0 50%;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj1 {
+    transform: translate(0, -47%);
+    top: 50%;
+    left: 54%;
+    z-index: 6;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj2 {
+    transform: translate(0, -100%);
+    top: 50%;
+    left: 66%;
+    z-index: 5;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj3 {
+    transform: translate(0, -21%);
+    top: 50%;
+    left: 47%;
+    z-index: 4;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj4 {
+    transform: translate(-100%, -100%);
+    top: 27%;
+    left: 50%;
+    z-index: 3;
+  }
+  .supermario-box #container #MainVisual #mvInner .obj5 {
+    top: 9%;
+    left: 8%;
+    z-index: 3;
+  }
+  .supermario-box #container #MainVisual #mvInner .logo {
+    position: fixed;
+    top: 50%;
+    margin: -116px 0 0 30px;
+    z-index: 10;
+  }
+  .supermario-box #container #MainVisual #mvInner .package {
+    position: fixed;
+    bottom: 30px;
+    margin-left: 35px;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 18px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    display: flex;
+  }
+  .supermario-box #container #MainVisual #mvInner .package .img img {
+    height: 100px;
+  }
+  .supermario-box #container #MainVisual #mvInner .package .other .movie {
+    position: relative;
+  }
+  .supermario-box #container #MainVisual #mvInner .package .other .movie a::after {
+    background: url(../img/ic_play.png) no-repeat 0 0;
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 19px;
+    left: 50%;
+    margin-left: -16px;
+  }
+  .supermario-box #mkOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    min-width: 1024px;
+    z-index: 999999;
+    overflow: auto;
+    background-color: rgba(35, 35, 35, 0.8);
+    display: none;
+  }
+  .supermario-box #mkOverlay #btnOvClose {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    z-index: 100;
+  }
+  .supermario-box #mkOverlay #btnOvClose a {
+    background: url(../img/btn_close.png) no-repeat 17px 17px;
+    background-color: #ff0a64;
+    display: block;
+    border-radius: 100%;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal {
+    background: url(../img/bg_movie.png) no-repeat 100% 100%, url(../img/logo.png) no-repeat 50% 50%;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask {
+    transform: translateY(-50%);
+    transition: width 0.4s ease, height 0.4s ease;
+    width: 0;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    margin: 0 auto;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer {
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #mainMovie {
+    width: 920px;
+    height: 520px;
+    margin-bottom: 20px;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb li {
+    margin: 0 16px;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb li a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb li a img {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb li a span {
+    display: block;
+    line-height: 150%;
+  }
+  .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb li a::after {
+    transition: transform 0.2s ease;
+    background: url(../img/ic_play.png) no-repeat 0 0;
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    margin-left: -16px;
+  }
+  
+
+//   temp top 文件
+.temp-box{
+    position: relative;
+    z-index: 90;
+    height:2000px;
+    background-color: skyblue;
 }

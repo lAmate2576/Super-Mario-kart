@@ -1,13 +1,18 @@
+// 给导航栏的跳转设置动画效果
+//函数文件
 function jumpAnimate(step, finalPos, callback) {
+    if(jumpId){
+        clearInterval(jumpId)
+        jumpId=null
+    }
    var jumpId= setInterval(function () {
-        var pos = document.body.scrollTop
-        console.log(document.body.scrollTop);
-        
+        var pos = $(document).scrollTop()
+       
         if (Math.abs(finalPos - pos) <= step) {
             //直接回到目标位置
            document.body.scrollTop = finalPos
             clearInterval(jumpId)
-            if (callback) {
+            if (callback) { 
                 callback()
             }
             return
@@ -17,15 +22,13 @@ function jumpAnimate(step, finalPos, callback) {
         } else if (finalPos - pos < 0) {
             var target = pos - step
         }
-        document.body.scrollTop=target
-    }, 15);
+        document.documentElement.scrollTop=target
+    }, 40);
 }
 $(function () {
     //右侧锚点跳转的js文件
-
     $('#wrapper').click(function () {
-        var win_scroll = window.scrollY;
-        jumpAnimate(6,0)
+        jumpAnimate(20,0)
         return false;
     });
 

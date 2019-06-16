@@ -16,6 +16,8 @@
   background-color: #fff;
 }
 #globalNav a div {
+  width: 0;
+  transition: 1s ;
   position: absolute;
   right: -50px;
   font-size: 12px;
@@ -45,9 +47,8 @@
 #globalNav a:hover div {
   display: block;
   width: 150px;
+  border-radius: 10px;
 }
-
-/* 头部的css文件 */
 .supermario-box {
   position: relative;
   max-width: 1920px;
@@ -211,7 +212,6 @@
   overflow: auto;
   background-color: rgba(35, 35, 35, 0.8);
   display: none;
-  overflow:hidden;
 }
 .supermario-box #mkOverlay #btnOvClose {
   position: absolute;
@@ -262,8 +262,6 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  position: relative;
-  bottom:100px;
 }
 .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer #movThumb li {
   margin: 0 16px;
@@ -294,13 +292,9 @@
   left: 50%;
   margin-left: -16px;
 }
-
-/* 头部的css文件 */
-
-/* temp.-box */
-.temp-box{
-  height:1000px;
-  background-color: skyblue;
+.temp-box {
   position: relative;
   z-index: 90;
+  height: 2000px;
+  background-color: skyblue;
 }
