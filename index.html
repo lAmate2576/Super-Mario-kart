@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>马里奥赛车8 豪华版｜任天堂</title>
     <link rel="stylesheet" href="css/loading.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -18,7 +19,7 @@
     <!-- 最外边的大盒子 -->
     <div id="wrapper">
         <div id="container">
-            <!-- loading的开始部分 -->
+            <!-- loading的开始部分  -->
             <div id="loading">
                 <div class="logo"><img src="images/loading-img/logo_mariokart8.png">
                 </div>
@@ -45,18 +46,134 @@
                     </div>
                 </div>
                 <div id="loadingBarSet">
-                        <p><img src="images/loading-img/txt_loading.png" ></p>
-                        <div id="loadingBarMask">
-                          <div id="loadingBar" style="width: calc(56% - 4px);"></div>
-                        </div>
-                      </div>
+                    <p><img src="images/loading-img/txt_loading.png"></p>
+                    <div id="loadingBarMask">
+                        <div id="loadingBar" style="width: calc(56% - 4px);"></div>
+                    </div>
+                </div>
                 <!-- loading的结束部分 -->
             </div>
-            <div class=realPage>
-                <p>设置真正的文本</p>
+            <!-- 右侧的整体导航按钮 -->
+            <nav id="globalNav" class="mv_parts">
+                <ul>
+                    <li><a href="#wrapper" class="scroll">
+                            <div class="mask"><span>顶部</span></div>
+                        </a></li>
+                    <li><a href="#characterContents" class="scroll">
+                            <div class="mask"><span>角色</span></div>
+                        </a></li>
+                    <li><a href="#courseContents" class="scroll">
+                            <div class="mask"><span>赛道</span></div>
+                        </a></li>
+                    <li><a href="#itemContents" class="scroll">
+                            <div class="mask"><span>道具</span></div>
+                        </a></li>
+                    <li><a href="#battleContents" class="scroll">
+                            <div class="mask"><span>对战</span></div>
+                        </a></li>
+                </ul>
+            </nav>
+            <!-- 头部内容 -->
+            <div class="supermario-box">
+                <!-- 导航栏 -->
+                <div class="nav">
+                    <div class="navTop" >
+                        <ul class="w">
+                            <li>
+                                <a href="#">人物</a>
+                            </li>
+                            <li>
+                                <a href="#">课程</a>
+                            </li>
+                            <li>
+                                <a href="#">项目</a>
+                            </li>
+                            <li>
+                                <a href="#">战斗模式</a>
+                            </li>
+                            <li>
+                                <a href="#">玩的方式</a>
+                            </li>
+                            <li>
+                                <a href="#"><i></i>立即购买</a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="navBottom"></div>
+
+                </div>
+                <!-- container -->
+                <div id="container">
+                    <div id="MainVisual">
+                        <div id="mvInner">
+                            <div class="obj obj1">
+                                <img class="target_img" src="img/img_mario.png">
+                            </div>
+                            <div class="obj obj2">
+                                <img class="target_img" src="img/img_peach.png">
+                            </div>
+                            <div class="obj obj3">
+                                <img class="target_img" src="img/img_koopa.png">
+                            </div>
+                            <div class="obj obj4">
+                                <img class="target_img" src="img/img_chara-other.png">
+                            </div>
+                            <div class="obj obj5">
+                                <img class="target_img" src="img/img_jugemu.png">
+                            </div>
+                            <div class="logo">
+                                <img src="img/logo_mariokart8.png" alt="">
+                            </div>
+                            <div class="package">
+                                <div class="img">
+                                    <img src="img/img_package.png">
+                                </div>
+                                <div class="other">
+                                    <div class="movie" id="btnMovie">
+                                        <a href="javascript:vouid(0)">
+                                            <img src="img/btn_movie.png">
+                                        </a>
+                                    </div>
+                                    <div class="mk_amiibo">
+                                        <a href="javascript:vouid(0)">
+                                            <img src="img/btn_amiibo.png">
+                                        </a>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="mkOverlay" class="hide">
+                    <div id="btnOvClose" class="btn_close"><a href="javascript:void(0)">CLOSE</a></div>
+                    <div id="ovContainer">
+                        <section id="movieModal" class="contents">
+                            <div class="mask">
+                                <div id="movieContainer">
+                                    <div id="mainMovie"></div>
+
+                                    <ul id="movThumb">
+                                        <li><a href="javascript:void(0)" data-ytid="t9VZn_fu5nA">
+                                                <img src="./img/thumb_01.jpg" alt="">
+                                                <span>介紹影片</span>
+                                            </a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+            <!-- 头部内容 -->
+            <div class='temp-box'>
+                
             </div>
         </div>
+        <script src="./lib/jQuery/jquery-1.12.4.js"></script>
         <script src="js/loading.js"></script>
+        <script src="./js/index.js"></script>
 </body>
 
 </html>
