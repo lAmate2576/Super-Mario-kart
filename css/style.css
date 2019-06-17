@@ -295,6 +295,112 @@
 .temp-box {
   position: relative;
   z-index: 90;
-  height: 2000px;
   background-color: skyblue;
+}
+.racingTrack {
+  padding: 50px 0 450px 0;
+}
+.inner {
+  max-width: 1024px;
+  margin: 0 auto;
+  position: relative;
+}
+.racingTrack h2 {
+  text-align: left;
+  margin: 0 0 70px 0;
+}
+img {
+  line-height: 100%;
+  vertical-align: bottom;
+}
+.racingTrack .label {
+  position: absolute;
+  top: -35px;
+  right: 0;
+}
+.racingTrack #courseList {
+  margin-bottom: 90px;
+}
+.racingTrack #courseList dl {
+  margin-bottom: 30px;
+  /* margin-left: 105px; */
+}
+.racingTrack #courseList dt {
+  width: 106px;
+  height: 123px;
+  text-indent: -9999px;
+  background-image: url(../images/img_cup-sprite.png);
+  background-repeat: no-repeat;
+  position: relative;
+}
+.racingTrack #courseList dd {
+  margin: -123px 0 0 126px;
+  overflow: hidden;
+}
+dl.action dd {
+  width: 100%;
+}
+.racingTrack #courseList dd ul {
+  float: left;
+  width: 1024px;
+}
+.racingTrack #courseList dd ul li {
+  float: left;
+}
+.racingTrack #courseList dd a {
+  display: block;
+  padding-right: 10px;
+}
+.racingTrack #courseList dd a img {
+  line-height: 100%;
+  vertical-align: bottom;
+  width: 217px;
+  height: 122px;
+}
+.cup02 dt {
+  background-position: -106px 0px;
+}
+.cup03 dt {
+  background-position: -212px 0px;
+}
+.cup04 dt {
+  background-position: -318px 0px;
+}
+.cup05 dt {
+  background-position: 0px -124px;
+}
+.cup06 dt {
+  background-position: -106px -124px;
+}
+.cup07 dt {
+  background-position: -212px -124px;
+}
+.cup08 dt {
+  background-position: -318px -124px;
+}
+.cup09 dt {
+  background-position: 0px -248px;
+}
+.cup10 dt {
+  background-position: -106px -248px;
+}
+.cup11 dt {
+  background-position: -212px -248px;
+}
+.cup12 dt {
+  background-position: -318px -248px;
+}
+.racingTrack #courseOption {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+.racingTrack #courseOption dl:nth-child(1) {
+  margin-right: 14px;
+}
+.racingTrack #courseOption .notice {
+  position: absolute;
+  right: -10px;
+  top: 160px;
 }

@@ -23,12 +23,12 @@ function jumpAnimate(step, finalPos, callback) {
             var target = pos - step
         }
         document.documentElement.scrollTop=target
-    }, 40);
+    }, 10);
 }
 $(function () {
     //右侧锚点跳转的js文件
     $('#wrapper').click(function () {
-        jumpAnimate(20,0)
+        jumpAnimate(50,0)
         return false;
     });
 
@@ -51,6 +51,7 @@ $(function () {
         }, 1800)
         $('#btnMovie').click(function () {
             $('#mkOverlay').slideDown(800)
+            return false;
         })
         $('#btnOvClose').click(function () {
             $('#mkOverlay').slideUp(800)
