@@ -1,0 +1,23 @@
+.section-swiper .inner {
+  width: 1024px;
+  height: 180px;
+  margin: 0 auto;
+  position: relative;
+}
+.section-swiper .inner h2 {
+  width: 1024px;
+  height: 108px;
+  text-align: left;
+}
+.section-swiper .inner .godbattle {
+  position: absolute;
+  top: -32px;
+  right: 4px;
+}
+#battle #battleStage h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+#battle #battleStage p {
+  margin-bottom: 40px;
+}
