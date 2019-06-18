@@ -129,11 +129,13 @@ $(function () {
             $('.obj5').fadeIn(500)
         }, 1800)
         $('#btnMovie').click(function () {
-            $('#mkOverlay').slideDown(800)
+            $('#mkOverlay').slideDown(800);
+            $('#mainMovie video')[0].play()
             return false;
         })
         $('#btnOvClose').click(function () {
-            $('#mkOverlay').slideUp(800)
+            $('#mkOverlay').slideUp(800);
+            $('#mainMovie video')[0].load()
         })
     }, 9000)
 })

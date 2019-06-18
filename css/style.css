@@ -257,7 +257,6 @@
   position: relative;
   top: 50%;
   margin: 0 auto;
-  overflow: hidden;
 }
 .supermario-box #mkOverlay #ovContainer #movieModal .mask #movieContainer {
   transform: translate(-50%, -50%);
