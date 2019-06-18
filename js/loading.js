@@ -10,4 +10,4 @@ var loadingTimeId = setTimeout(function () {
     loading.parentNode.removeChild(loading)
     window.onload = function () {
     }
-}, 10000)
+}, 0)
