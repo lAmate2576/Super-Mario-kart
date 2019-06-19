@@ -4,8 +4,13 @@ its a demo to clone the website of the super-mario kart,hope we all will learn s
 ### [GitHub地址](https://github.com/lAmate2576/Super-Mario-kart)
 ### 初步页面已经实现
 ####需要改进的地方：
+-----
 1.轮播图的重新改写
+-----
 2.人物、场景及物品的delay效果设置
+-----
 3.底部bug的修复
+-----
 4.导航栏的重新改写
+-----
 5.视屏mask层的bug修复
