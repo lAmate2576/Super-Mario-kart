@@ -1,0 +1,300 @@
+/* 申明当前css文件是UTF-8字符编码 */
+@charset "UTF-8";
+/*清除所有元素内外间距*/
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, img {
+  margin: 0;
+  padding: 0;
+}
+/*让所有斜体 不倾斜*/
+em,
+i {
+    font-style: normal;
+}
+/*去掉列表前面的小点*/
+li {
+    list-style: none;
+}
+/*图片没有边框   去掉图片底侧的空白缝隙*/
+img {
+    border: 0;  
+    display: block;
+    width: 100%;
+}
+/*让button 按钮 变成小手*/
+button {
+    cursor: pointer;
+}
+/*取消链接的下划线*/
+a {
+    color: #666;
+    text-decoration: none;
+}
+
+
+
+button,
+input {
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    /*取消轮廓线 蓝色的*/
+    outline: none;
+    /* 边框去掉 */
+    border:0;
+}
+/* 去掉h1- h6的标签默认样式 */
+h1, h2, h3, h4, h5, h6 {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 100%;
+}
+body {
+    background-color: #fff;
+    font: 12px/1.5 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+    color: #666;
+}
+
+/*清除浮动*/
+.clearfix::after {
+    display: block;
+    content: "";
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1
+}
+/* 版心 */
+.w {
+    width: 1120px;
+    margin: 0 auto;
+
+}
+
+
+
+
+
+
+/* css reset:为什么? 为了重置默认样式, 并让各大浏览器的样式统一 */
+/* 初始化 */
+body,
+div,
+ul,
+li,
+ol,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+input,
+textarea,
+select,
+p,
+dl,
+dt,
+dd,
+a,
+img,
+button,
+form,
+table,
+th,
+tr,
+td,
+tbody,
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+menu,
+nav,
+section {
+  margin: 0;
+  padding: 0;
+  /* 给我们能用到的盒子都加上了, box-sizing: border-box; */
+  /* box-sizing: border-box; */
+}
+/* div {
+  display: block;
+} */
+/* html {
+  vertical-align: baseline;
+} */
+/* body {
+  color: #3c3c3c;
+  font-family: "ncommonCn", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  min-width: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+  vertical-align: baseline;
+} */
+/* div {
+  vertical-align: baseline;
+} */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* font-size: 100%; */
+  /* font: inherit; */
+  /* vertical-align: baseline; */
+  /* display: block; */
+}
+/*去除边框*/
+fieldset,
+img,
+input,
+button,
+textarea {
+  border: none;
+  /*去除的蓝色小边框*/
+  outline-style: none;
+}
+/*禁止表单域缩放*/
+textarea {
+  resize: none;
+}
+a {
+  text-decoration: none;
+}
+/* 图片自适应 */
+img {
+  /*解决图片底部对其问题, 底部对齐问题, 只对于行内块元素有 */
+  display: block;
+}
+ul,
+ol {
+  list-style: none;
+}
+/* 把所有的标题的样式全部重置了 */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-decoration: none;
+  font-weight: normal;
+}
+/* 废物利用 */
+em,
+i {
+  font-style: normal;
+}
+/* 提供了一些公共类 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/*清除浮动*/
+.clearfix {
+  content: '';
+  display: table;
+  clear: both;
+}
+/*单行溢出*/
+.one-txt-cut {
+  overflow: hidden;
+  /* 文字在一行显示, 不换行 */
+  white-space: nowrap;
+  /* 文字溢出显示省略号 */
+  text-overflow: ellipsis;
+}
+/*多行溢出*/
+.txt-cut {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
